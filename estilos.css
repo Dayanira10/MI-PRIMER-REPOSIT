@@ -1,0 +1,317 @@
+/* Google Fonts Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f9fafc;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Contenedor y caja global */
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Header */
+  header {
+    background-color: #121212;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 3px #00ffc8);
+    border: 3px solid white;
+  }
+  
+  header h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    color: #00ffc8;
+    outline: none;
+  }
+  
+  /* Hero con fondo dinámico */
+  .hero {
+    height: 60vh;
+    background: url('creativos\ mmmm.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+  
+  .hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    animation: fadeInDown 1s ease forwards;
+  }
+  
+  .hero-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+  }
+  
+  /* Animación Hero */
+  @keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Servicios */
+  .servicios {
+    padding: 3rem 2rem;
+    background: white;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .servicios h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .servicios-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .servicios-lista li {
+    background: #00ffc8;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,255,200,0.2);
+    color: #121212;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+  }
+  
+  .servicios-lista li:hover,
+  .servicios-lista li:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,255,200,0.4);
+    outline: none;
+  }
+  
+  .servicios-lista img {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .servicios-lista h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .servicios-lista p {
+    font-size: 1rem;
+  }
+  
+  /* Tabla de planes */
+  .planes {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  
+  .planes h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  thead {
+    background: #00ffc8;
+    color: #121212;
+  }
+  
+  thead th {
+    padding: 1rem;
+    font-weight: 700;
+  }
+  
+  tbody tr {
+    background: white;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+  
+  tbody tr:hover {
+    background: #f0fff9;
+  }
+  
+  tbody td {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  /* Formulario de contacto */
+  .contacto {
+    max-width: 600px;
+    margin: 3rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+  
+  .contacto h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .form-contacto label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+  
+  .form-contacto input,
+  .form-contacto textarea {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
+    font-family: inherit;
+  }
+  
+  .form-contacto input:focus,
+  .form-contacto textarea:focus {
+    border-color: #00ffc8;
+    box-shadow: 0 0 10px #00ffc8;
+    outline: none;
+  }
+  
+  .form-contacto button {
+    background-color: #00ffc8;
+    border: none;
+    padding: 1rem;
+    color: #121212;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .form-contacto button:hover,
+  .form-contacto button:focus {
+    background-color: #00b394;
+    transform: scale(1.05);
+    outline: none;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #121212;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.9rem;
+    border-top: 3px solid #00ffc8;
+  }
+  
+  footer p {
+    margin: 0.25rem 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+  }
+  
